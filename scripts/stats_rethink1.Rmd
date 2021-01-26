@@ -1,0 +1,79 @@
+---
+title: "stats_rethinking1"
+author: "Ali"
+date: "23/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## chapter 3
+paper suggested:
+Ludwig, Donald. “Uncertainty and the Assessment of Extinction Probabilities.” Ecological Applications 6, no. 4 (1996): 1067–76. https://doi.org/10.2307/2269591.
+
+
+The Globe tossing example;
+The true proportion of water covering the globe is p.
+The posterior here means the probability of p conditional on the data.
+```{r code 3.2, message=FALSE,warning=FALSE}
+p_grid <- seq( from=0 , to=1 , length.out=1000 )
+prob_p <- rep( 1 , 1000 )
+prob_data <- dbinom( 6 , size=9 , prob=p_grid )
+posterior <- prob_data * prob_p
+posterior <- posterior / sum(posterior)
+```
+## Chapter 4
+
+- Ali Q1.   Page 85: "To complete the model, we’re going to need some priors. The parameters to be estimated
+are both μ and σ, so we need a prior Pr(μ, σ), the joint prior probability for all parameters.
+In most cases, priors are specified independently for each parameter, which amounts to assuming Pr(μ, σ) = Pr(μ) Pr(σ)."
+The question is that, we need joint prior prob and assuming independently specified priors. What is the example of be abaling to assume independency?
+
+- Q2. page 85, height example, "The prior for μ is a broad Gaussian prior, centered on 178cm,
+with 95% of probability between 178 ± 40". why/how 40?
+I was reading: http://www.stat.yale.edu/Courses/1997-98/101/confint.htm#:~:text=A%2095%25%20confidence%20interval%20for,curve%20falls%20within%20this%20interval.
+
+- Q 3. page 86, rethinking, what property of normal dist made it that way such that ...?
+
+- Q 4. page 94, after R code 4.35, what does that mean? Ali He answered this later in 4.3.3
+"These samples also preserve the covariance between μ and σ. This hardly matters right now, because μ and σ don’t covary at all in this model. But once you add a predictor variable to your model, covariance will matter a lot."
+
+-Q 5. R code 4.38 what is behind set.seed(2971)? why 2971?
+
+I stopped at 4.4.3.4 page 105 date Jan 8 and moved to Chap 5
+
+## Chapter 5
+Note taken on date Jan 22, 2021; I jumped from 4.4 to 5.3 to be prepared for today's class
+
+### 5.3.1. Binary categories
+- Howell model, R code 5.44 of the book;
+  - Approach 1, indicator variable female=0 male=1;
+    - in the height model where, beta_m ~ Normal(0,10), it is simply says that the expected difference of sex on height for man is 0 with 10 std rather than women. right?
+    - another good point: "Furthermore, this approach necessarily assumes there is more uncertainty about one of the categories—“male” in this case—than the other. Why? Because a prediction for a male
+includes two parameters and therefore two priors."
+  - Approach 2, index variable female =1 male=2
+    - "this approach extends really nicely to contexts with more than two categories."
+    - contrast calculations.
+    
+- Case of many categories;  easier to use the index approach and the priors continue to be easier, unless you really do have prior information about
+contrasts.  
+- Milk data; R code 5.49 aim: a model to measure the average milk energy in each clade
+  
+## Chapter 6
+
+in this chapter, we’ll explore three different hazards: multicollinearity, post-treatment bias, and collider bias. tell us which variables we must and must not add to a model in order to arrive at valid inferences. But this framework
+does not do the most important step for us: It will not give us a valid model.
+
+- explains the selection-distortion effect and why it appears in multi regression.
+- Multicolliniearity;
+
+
+
+
+
+
+
+
+
