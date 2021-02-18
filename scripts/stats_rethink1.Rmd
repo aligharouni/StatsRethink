@@ -69,6 +69,26 @@ does not do the most important step for us: It will not give us a valid model.
 - explains the selection-distortion effect and why it appears in multi regression.
 - Multicolliniearity;
 
+## Chapter 7
+3 pieces
+- overfitting underfitting under,
+- penelizing regularizing priors
+- entropy; 
+
+- overfitting underfitting under;
+
+  - Fig 7.3, less data in a region leads to wider confidence interval
+  - Fig 7.4, linear regression is more stable but understimating the data, the 4th order estimating is covering all data but lots of variability
+
+- regularizing priors;
+  - bios is the expected mean is smaller than 
+  - reg; the rule of thumb preserve the correlation between params
+  - 
+
+
+
+
+
 
 
 
