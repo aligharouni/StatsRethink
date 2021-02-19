@@ -85,6 +85,23 @@ does not do the most important step for us: It will not give us a valid model.
   - reg; the rule of thumb preserve the correlation between params
   - 
 
+- log scoring
+  - where entropy is comming from?
+  - by thinking about multinomial probablity where all we know is the freq of 
+  - log likelihood is connected to entropy 
+
+- 7.2.3; looking at distances between 2 distr by measuring ave entropy across 1 distribution which is p. we are comparing 2 dist D_KL
+
+- the derivation of AIC, assumption that you are close enough to reality then we move on
+  - different between models
+  
+- 7.2.5; simulated training and testing
+
+- 7.4.1 cross validation
+- 7.4.2 we have this AIC, DIC (has a assumption of posterior be muli normal)
+  - WAIC; we assume independence of all the points
+
+
 
 
 
