@@ -30,14 +30,15 @@ plot( resid(m) ~ speed , data=cars )
 
 ## R code 0.5
 install.packages(c("coda","mvtnorm","devtools","dagitty"))
+install.packages("usethis")
 library(usethis) #AG
 library(devtools)
 devtools::install_github("rmcelreath/rethinking")
 
 # AG added
-library(rstan)
-library(StanHeaders)
 library(ggplot2)
+library(StanHeaders)
+library(rstan)
 ## R code 2.1
 ways <- c( 0 , 3 , 8 , 9 , 0 )
 ways/sum(ways)

@@ -102,10 +102,40 @@ does not do the most important step for us: It will not give us a valid model.
   - WAIC; we assume independence of all the points
 
 
+## chapter 8
+Conditional Manatees
+
+whole bunch of questions:
+
+- page 242; about this paragraph 
+"Multilevel models induce similar effects. Common sorts of multilevel models are essentially massive interaction models, in which estimates (intercepts and slopes) are conditional on clusters (person, genus, village, city, galaxy) in the data. Multilevel interaction effects are complex. They’re not just allowing the impact of a predictor variable to change depending upon some other variable, but they are also estimating aspects of the distribution of those changes."
+  - Q1; about models dealing with longitudinal data; Are these type of models sort of the multilevel models with clusters as people?
+  - Q2; About "estimating aspects of the distribution of those changes"; I am trying to picture what he is saying here. Say if we have n clusters and we are estimating the slope-intercept, ie the effect of x on y conditional on the cluster. So we get n slopes-intercepts, so we can look at the frequency of these slopes and have a sense of a distribution? Or i am misunderstanding this, I can be the residuals distribution assumption is allowed to change across the clusters?
+  
+- page 243;
+"We use the logarithm of it, because the logarithm of GDP is the magnitude
+of GDP. Since wealth generates wealth, it tends to be exponentially related to anything that
+increases it. This is like saying that the absolute distances in wealth grow increasingly large,
+as nations become wealthier. So when we work with logarithms instead, we can work on
+a more evenly spaced scale of magnitudes."
+  - Q1; the logic of using log GPD is still not very clear here?
+  
+- Figure 8.2
+  - in the left panel, it seems 2 outliers, wouldn't be better to present the results with and without these two points?
+  I guess my general question is that if we see clusters data by plotting in x-y, would it still be valid to do the linear regression? what are the options here? 
+  
+- R code 8.1; 
+ He has log transformed the d$rgdppc_2000, then rescaled by the mean;
+  - General Q: Is it sensible to rescale and then transform? Doeas it depend of the kind of transformation?
+  - 
+  
+- Triptych in old school stats called coplot (coefficient)
 
 
+## chapter 9
+MCMC
 
-
+- Markove Island; 
 
 
 

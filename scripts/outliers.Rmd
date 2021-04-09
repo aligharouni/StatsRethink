@@ -1,0 +1,39 @@
+---
+title: "outliers"
+author: "Ali"
+date: "09/04/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Ben Bolker et al discussed topics like:
+
+   robust estimation (M-estimation)
+   what do 'outliers' in boxplots mean?
+   leverage and influence
+   'breakdown points' and contamination
+   mixture models
+
+   but the main point (I think) is to understand (1) what process you
+think is generating outliers and (2) what effects you think the outliers
+are having on the results
+
+- use vilonplot rather than boxplot when you have lots of data.
+- hexbinplot
+
+ben
+ggplot, scale="count", from ?geom_boxplot: if "area" (default), all violins have the same area (before
+trimming the tails). If "count", areas are scaled
+proportionally to the number of observations. If "width", all
+violins have the same maximum width. 
+
+For robust linear models? package robustbase 
+robust mix model
+
+
+```{r cars}
+summary(cars)
+```
+
